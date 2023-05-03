@@ -2,9 +2,11 @@
 
 {% block css %}
   <style>
-    html {
-      height: 100%;
+
+    label{
+      color:white;
     }
+
     body {
       margin:0;
       padding:0;
@@ -13,10 +15,11 @@
     }
 
     .login-box {
-      position: absolute;
-      top: 50%;
+      position:absolute;
+      margin-top: 10%;
+      top:40%;
       left: 50%;
-      width: 400px;
+      width: 1000px;
       padding: 40px;
       transform: translate(-50%, -50%);
       background: rgba(0,0,0,.5);
@@ -68,16 +71,20 @@
 
     .login-box form a {
       position: relative;
+      left:35%;
       display: inline-block;
       padding: 10px 20px;
       color: #03e9f4;
-      font-size: 16px;
-      text-decoration: none;
+      font-size: 20px;
+      text-decoration:none;
+      font-weight: bolder;
       text-transform: uppercase;
       overflow: hidden;
       transition: .5s;
       margin-top: 40px;
-      letter-spacing: 4px
+      letter-spacing: 4px;
+      text-align: center;
+      width:30%;
     }
 
     .login-box a:hover {
@@ -169,18 +176,63 @@
         bottom: 100%;
       }
     }
+
   </style>
 {% endblock %}
 
 {% block body %}
-  <div class="login-box rounded">
-    <h2>Upload File </h2>
-    <form method = "POST">
-      <label>Upload CSV File</label>
-      <div class="user-box">
-        <input type="file" name="file" >
+  <div class="container-fluid login-box rounded">
+    <h2>Fill Details</h2>
+
+    <!-- Detail Form -->
+    <form method = "POST" >
+      <div class="row padding" >
+        <div class="col-sm-5 col-md-6 " style="border-right:2px dotted white; ">
+          <label>ROA(C) before interest and depreciation before interest</label>
+          <div class="user-box">
+            <input type="number" name="ROA(C)" >
+          </div>
+          <label>ROA(A) before interest and % after tax</label>
+          <div class="user-box">
+            <input type="number" name="ROA(A)" >
+          </div>
+          <label>ROA(B) before interest and depreciation after tax</label>
+          <div class="user-box">
+            <input type="number" name="ROA(B)" >
+          </div>
+          <label>EPS</label>
+          <div class="user-box">
+            <input type="number" name="EPS" >
+          </div>
+          <label>Per Share Net profit before tax</label>
+          <div class="user-box">
+            <input type="number" name="Share Net Profit" >
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-6">
+          <label>Debt ratio</label>
+          <div class="user-box">
+            <input type="number" name="Debt ratio" >
+          </div>
+          <label>Net worth/Assets</label>
+          <div class="user-box">
+            <input type="number" name="Net Assets" >
+          </div>
+          <label> Net profit before tax/Paid-in capital</label>
+          <div class="user-box">
+            <input type="number" name=" Net profit before tax" >
+          </div>
+          <label> Retained Earnings to Total Assets</label>
+          <div class="user-box">
+            <input type="number" name=" Retained Earnings" >
+          </div>
+          <label>Net Income to Total Assets</label>
+          <div class="user-box">
+            <input type="number" name="Net Income" >
+          </div>
+        </div>
       </div>
-        <a href="#">
+      <a href="/">
           <span></span>
           <span></span>
           <span></span>
