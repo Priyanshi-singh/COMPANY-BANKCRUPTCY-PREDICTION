@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
 
 {% block css %}
-  <style>
-
-    label{
-      color:white;
-    }
+<style>
 
     body {
       margin:0;
       padding:0;
-      font-family: sans-serif;
-      background: linear-gradient(#b429f9, #26c5f3 );
+      padding-bottom: 30%;
+      background-image: url('/static/images/Home1.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Courier New', Courier, monospace;
+      color:white;
+      
     }
 
     .login-box {
       position:absolute;
-      margin-top: 10%;
+      margin-top: 25%;
       top:40%;
       left: 50%;
       width: 1000px;
@@ -26,6 +29,8 @@
       box-sizing: border-box;
       box-shadow: 0 15px 25px rgba(0,0,0,.6);
       border-radius: 10px;
+      
+     
     }
 
     .login-box h2 {
@@ -35,38 +40,38 @@
       text-align: center;
     }
 
-    .login-box .user-box {
+     .user-box {
       position: relative;
+    }
+    
+    label{
+        font-size: 2.5vh;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 5px 0;
+        transition: .5s;    
     }
 
     .login-box .user-box input {
       width: 100%;
-      padding: 10px 0;
+      padding: 5px 0;
       font-size: 16px;
       color: #fff;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       border: none;
       border-bottom: 1px solid #fff;
       outline: none;
       background: transparent;
     }
-    .login-box .user-box label {
-      position: absolute;
-      top:0;
-      left: 0;
-      padding: 10px 0;
-      font-size: 16px;
-      color: #fff;
-      pointer-events: none;
-      transition: .5s;
-    }
-
+   
     .login-box .user-box input:focus ~ label,
     .login-box .user-box input:valid ~ label {
       top: -20px;
       left: 0;
       color: #03e9f4;
-      font-size: 12px;
+      
     }
 
     .login-box form a {
@@ -177,70 +182,83 @@
       }
     }
 
+    p{
+      color: white;
+      font-size: small;
+      font-family:sans-serif;
+    }
   </style>
 {% endblock %}
 
-{% block body %}
-  <div class="container-fluid login-box rounded">
+{% block content %}
+<div class="container-fluid login-box mb-3 rounded">
     <h2>Fill Details</h2>
 
     <!-- Detail Form -->
     <form method = "POST" >
-      <div class="row padding" >
+      <div class="row padding " >
         <div class="col-sm-5 col-md-6 " style="border-right:2px dotted white; ">
-          <label>ROA(C) before interest and depreciation before interest</label>
+          <label>Return on asset (C) before interest and depreciation before interest</label>
+          <p>-> It is defined as the ratio between net income and total average assets (C)</p>
           <div class="user-box">
             <input type="number" name="ROA(C)" >
           </div>
-          <label>ROA(A) before interest and % after tax</label>
+          <label>Return on asset (A) before interest and % after tax</label>
+          <p>-> It is defined as the ratio between net income and total average assets (A)</p>
           <div class="user-box">
             <input type="number" name="ROA(A)" >
           </div>
-          <label>ROA(B) before interest and depreciation after tax</label>
+          <label>Return on asset (B) before interest and depreciation after tax</label>
+          <p>-> It is defined as the ratio between net income and total average assets (B)</p>
           <div class="user-box">
             <input type="number" name="ROA(B)" >
           </div>
-          <label>EPS</label>
+          <label>EPS (Earning Per Share)</label>
+          <p>-> It is a financial ratio that measures the profitability of a company on a per-share basis. </p>
           <div class="user-box">
             <input type="number" name="EPS" >
           </div>
           <label>Per Share Net profit before tax</label>
+          <p>-> It refers to a financial measure that indicates the amount of net profit earned by a company on a per-share basis before accounting for taxes</p>
           <div class="user-box">
             <input type="number" name="Share Net Profit" >
           </div>
         </div>
         <div class="col-sm-5 col-md-6">
           <label>Debt ratio</label>
+          <p>-> It is a measure that indicates the proportion of a company's total debt in relation to its total assets. </p>
           <div class="user-box">
             <input type="number" name="Debt ratio" >
           </div>
           <label>Net worth/Assets</label>
+          <p>-> It refers to the total value of a company's assets minus its liabilities.</p>
           <div class="user-box">
             <input type="number" name="Net Assets" >
           </div>
-          <label> Net profit before tax/Paid-in capital</label>
+          <label>Net profit before tax/Paid-in capital</label>
+          <p>-> It is a financial ratio that measures the profitability of a company relative to its paid-in capital.</p>
           <div class="user-box">
             <input type="number" name=" Net profit before tax" >
           </div>
-          <label> Retained Earnings to Total Assets</label>
+          <label>Retained Earnings to Total Assets</label>
+          <p>-> It is a financial ratio that assesses the proportion of a company's total assets that is funded by its retained earnings.</p>
           <div class="user-box">
             <input type="number" name=" Retained Earnings" >
           </div>
           <label>Net Income to Total Assets</label>
+          <p>-> It is a financial ratio that measures the profitability of a company relative to its total assets.</p>
           <div class="user-box">
             <input type="number" name="Net Income" >
           </div>
         </div>
       </div>
       <a href="/">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Upload
-        </a>
-    </form>
-  </div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Upload
+      </a>
+  </form>
+</div>
 {% endblock %}
-
-{% block js %}{% endblock %}
