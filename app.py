@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask   import Flask, render_template, request, redirect, flash
 import pandas as pd 
 import numpy as np
 from select_col import select_col
@@ -27,6 +27,14 @@ def form():
             print(sample)
             result = result(sample)
         return render_template('form.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/eda')
+def eda():
+    return render_template('eda.html')
 
 def result(sample_data):
      result = return_model.score(sample_data)

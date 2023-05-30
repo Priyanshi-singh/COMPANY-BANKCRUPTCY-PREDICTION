@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block css %}
+    <style>
+        body{
+            background-color: dimgray;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row py-5">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-left">
+              <img class="card-img-top" src="/static/images/g1.png" alt="">
+              <div class="card-footer">
+                Feature distribution
+              </div>
+            </div>            
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-left">
+              <img class="card-img-top" src="/static/images/g2.png" alt="">
+              <div class="card-footer">
+                Confusion Matrix
+              </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-left">
+              <img class="card-img-top" src="/static/images/g3.png" alt="">
+              <div class="card-footer">
+                Classification Report
+              </div>
+            </div>            
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
