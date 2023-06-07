@@ -1,31 +1,51 @@
 {% extends 'base.html' %}
 
 {% block css %}
+<<<<<<< HEAD
   <style>
 
+=======
+<style>
+>>>>>>> 3bc2eecce3702dbb06727012a54876dc84267fb1
 
     body {
       margin:0;
       color:white;
       padding:0;
+<<<<<<< HEAD
       font-family: sans-serif;
       background-image: url('/static/images/Company\ backruptcy.jpg');
+=======
+      padding-bottom: 30%;
+      background-image: url('/static/images/Home1.jpg');
+>>>>>>> 3bc2eecce3702dbb06727012a54876dc84267fb1
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
+<<<<<<< HEAD
 
     }
     label{
       font-family:monospace;
       font-size: 15px;
       text-transform:uppercase;
+=======
+      font-family: 'Courier New', Courier, monospace;
+      color:white;
+      
+>>>>>>> 3bc2eecce3702dbb06727012a54876dc84267fb1
     }
 
     .login-box {
       position:absolute;
+<<<<<<< HEAD
       margin-top: 20%;
       top:50%;
+=======
+      margin-top: 25%;
+      top:40%;
+>>>>>>> 3bc2eecce3702dbb06727012a54876dc84267fb1
       left: 50%;
       width: 1000px;
       padding: 40px;
@@ -34,6 +54,8 @@
       box-sizing: border-box;
       box-shadow: 0 15px 25px rgba(0,0,0,.6);
       border-radius: 10px;
+      
+     
     }
 
     .login-box h2 {
@@ -43,38 +65,38 @@
       text-align: center;
     }
 
-    .login-box .user-box {
+     .user-box {
       position: relative;
+    }
+    
+    label{
+        font-size: 2.5vh;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 5px 0;
+        transition: .5s;    
     }
 
     .login-box .user-box input {
       width: 100%;
-      padding: 10px 0;
+      padding: 5px 0;
       font-size: 16px;
       color: #fff;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       border: none;
       border-bottom: 1px solid #fff;
       outline: none;
       background: transparent;
     }
-    .login-box .user-box label {
-      position: absolute;
-      top:0;
-      left: 0;
-      padding: 10px 0;
-      font-size: 16px;
-      color: #fff;
-      pointer-events: none;
-      transition: .5s;
-    }
-
+   
     .login-box .user-box input:focus ~ label,
     .login-box .user-box input:valid ~ label {
       top: -20px;
       left: 0;
       color: #03e9f4;
-      font-size: 12px;
+      
     }
 
     .login-box form a {
@@ -187,18 +209,23 @@
 
     p{
       color: white;
+<<<<<<< HEAD
       font-size:12px;
+=======
+      font-size: small;
+      font-family:sans-serif;
+>>>>>>> 3bc2eecce3702dbb06727012a54876dc84267fb1
     }
   </style>
 {% endblock %}
 
-{% block body %}
-  <div class="container-fluid login-box rounded">
+{% block content %}
+<div class="container-fluid login-box mb-3 rounded">
     <h2>Fill Details</h2>
 
     <!-- Detail Form -->
     <form method = "POST" >
-      <div class="row padding" >
+      <div class="row padding " >
         <div class="col-sm-5 col-md-6 " style="border-right:2px dotted white; ">
           <label>Return on asset (C) before interest and depreciation before interest</label>
           <p>-> It is defined as the ratio between net income and total average assets (C)</p>
@@ -255,14 +282,12 @@
         </div>
       </div>
       <a href="/">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Upload
-        </a>
-    </form>
-  </div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Upload
+      </a>
+  </form>
+</div>
 {% endblock %}
-
-{% block js %}{% endblock %}
