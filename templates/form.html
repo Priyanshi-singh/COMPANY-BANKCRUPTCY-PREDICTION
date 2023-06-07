@@ -3,21 +3,24 @@
 {% block css %}
   <style>
 
-    label{
-      color:white;
-    }
 
     body {
       margin:0;
+      
       padding:0;
       font-family: sans-serif;
-      background: linear-gradient(#b429f9, #26c5f3 );
+      background-image: url('/static/images/Company\ backruptcy.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
     }
 
     .login-box {
       position:absolute;
-      margin-top: 10%;
-      top:40%;
+      margin-top: 20%;
+      top:50%;
       left: 50%;
       width: 1000px;
       padding: 40px;
@@ -177,6 +180,9 @@
       }
     }
 
+    p{
+      color: white;
+    }
   </style>
 {% endblock %}
 
@@ -188,45 +194,55 @@
     <form method = "POST" >
       <div class="row padding" >
         <div class="col-sm-5 col-md-6 " style="border-right:2px dotted white; ">
-          <label>ROA(C) before interest and depreciation before interest</label>
+          <label>Return on asset (C) before interest and depreciation before interest</label>
+          <p>-> It is defined as the ratio between net income and total average assets (C)</p>
           <div class="user-box">
             <input type="number" name="ROA(C)" >
           </div>
-          <label>ROA(A) before interest and % after tax</label>
+          <label>Return on asset (A) before interest and % after tax</label>
+          <p>-> It is defined as the ratio between net income and total average assets (A)</p>
           <div class="user-box">
             <input type="number" name="ROA(A)" >
           </div>
-          <label>ROA(B) before interest and depreciation after tax</label>
+          <label>Return on asset (B) before interest and depreciation after tax</label>
+          <p>-> It is defined as the ratio between net income and total average assets (B)</p>
           <div class="user-box">
             <input type="number" name="ROA(B)" >
           </div>
-          <label>EPS</label>
+          <label>EPS (Earning Per Share)</label>
+          <p>-> It is a financial ratio that measures the profitability of a company on a per-share basis. </p>
           <div class="user-box">
             <input type="number" name="EPS" >
           </div>
           <label>Per Share Net profit before tax</label>
+          <p>-> It refers to a financial measure that indicates the amount of net profit earned by a company on a per-share basis before accounting for taxes</p>
           <div class="user-box">
             <input type="number" name="Share Net Profit" >
           </div>
         </div>
         <div class="col-sm-5 col-md-6">
           <label>Debt ratio</label>
+          <p>-> It is a measure that indicates the proportion of a company's total debt in relation to its total assets. </p>
           <div class="user-box">
             <input type="number" name="Debt ratio" >
           </div>
           <label>Net worth/Assets</label>
+          <p>-> It refers to the total value of a company's assets minus its liabilities.</p>
           <div class="user-box">
             <input type="number" name="Net Assets" >
           </div>
-          <label> Net profit before tax/Paid-in capital</label>
+          <label>Net profit before tax/Paid-in capital</label>
+          <p>-> It is a financial ratio that measures the profitability of a company relative to its paid-in capital.</p>
           <div class="user-box">
             <input type="number" name=" Net profit before tax" >
           </div>
-          <label> Retained Earnings to Total Assets</label>
+          <label>Retained Earnings to Total Assets</label>
+          <p>-> It is a financial ratio that assesses the proportion of a company's total assets that is funded by its retained earnings.</p>
           <div class="user-box">
             <input type="number" name=" Retained Earnings" >
           </div>
           <label>Net Income to Total Assets</label>
+          <p>-> It is a financial ratio that measures the profitability of a company relative to its total assets.</p>
           <div class="user-box">
             <input type="number" name="Net Income" >
           </div>
