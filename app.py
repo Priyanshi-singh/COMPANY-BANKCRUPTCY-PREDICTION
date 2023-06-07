@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, redirect, flash, url_for
 import pandas as pd 
 import numpy as np
 from select_col import select_col
@@ -26,11 +26,16 @@ def form():
                                    Retained_Earnings,Net_Income]],columns = select_col)
             print(sample)
             result = result(sample)
+            return redirect(url_for('predict',result = result))
         return render_template('form.html')
 
 def result(sample_data):
      result = return_model.score(sample_data)
      return result
+
+@app.route('/predict')
+def predict():
+    return render_template('predict.html',result = result)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container{
+            margin-top: 20px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            align-items: center;
+        }
+        .card{
+            margin-top:10px;
+            margin-bottom:10px;
+            border: 3px solid #ccc;
+            align-self: center;
+
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="result">PREDICTION RESULT</h2>
+        <br>
+        <div class="row">
+        {% if result == 1 %}
+          <div class="col-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><span class="badge bg-success">NEGATIVE</span></h3>
+                <p class="card-text">Text</p>
+            {% else %}
+                <h3 class="card-title"><span class="badge bg-danger">POSITIVE</span></h3>
+                <p class="card-text">Text</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
