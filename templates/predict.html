@@ -2,48 +2,73 @@
 
 {% block css %}
     <style>
+        body{
+
+            background-image: url('/static/images/result.webp');
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
+            color:white;
+        }
         .result {
             text-align: center;
             margin-top: 20px;
         }
         .container{
-            margin-top: 20px;
-            border: 3px solid #ccc;
+            margin-top: 100px;
+            padding:10px;
+            border: 3px dotted #ccc;
+            background:transparent;
             border-radius: 10px;
             padding: 20px;
             align-items: center;
+            font-weight: bolder;
         }
-        .card{
+        .container-fluid{
+            padding:10px;
             margin-top:10px;
             margin-bottom:10px;
-            border: 3px solid #ccc;
+            margin-left:10px;
             align-self: center;
 
         }
     </style>
 {% endblock %}
 
-{% block body %}
-    <div class="container">
-        <h2 class="result">PREDICTION RESULT</h2>
+{% block content %}
+    <div class="container mb-3">
+        <h1 class="result" style="margin-top:20px;">PREDICTION RESULT</h1>
         <br>
         <div class="row">
-          <div class="col-4">
-            <div class="card">
-              <div class="card-body">
+          <div class="col-10">
+            <div class="container-fluid">
+              <div class="container-body">
               {% if result == 1 %}
-                <h3 class="card-title"><span class="badge bg-success">NEGATIVE</span></h3>
-                <p class="card-text">
+                <h3 class="container-title align-items-center"><span class="badge bg-success">NEGATIVE</span></h3>
+                <p class="container-text">
                   Congratulations! The bankruptcy prediction result for your organization is negative, indicating a low risk of financial instability and insolvency. This is a positive outcome, but it's important to maintain vigilant financial management practices to ensure continued stability and sustainable growth. 
                 </p>
               {% else %}
-                <h3 class="card-title"><span class="badge bg-danger">POSITIVE</span></h3>
-                <p class="card-text">
+                <h3 class="container-title"><span class="badge bg-danger">POSITIVE</span></h3>
+                <p class="container-text ">
                   Attention! The bankruptcy prediction result for your organization is positive, indicating a high likelihood of financial instability and potential insolvency. It is crucial to address this situation promptly by implementing strategic measures and seeking professional guidance to mitigate the risk of bankruptcy. Take immediate action to safeguard the future of your organization and ensure its financial well-being.
                 </p>
               {% endif %}
-                <h4>Parameters :</h4>
-                <p class="card-text"></p>
+                <h2>Parameters :</h2>
+                <p class="container-text" style="background:transparent;">
+                  <ul class="list-group list-group-numbered" style="background:transparent;">
+                    <li class="list-group-item ">ROA(C) before interest and depreciation before interest: Return On Total Assets(C)</li>
+                    <li class="list-group-item">ROA(A) before interest and % after tax: Return On Total Assets(A)</li>
+                    <li class="list-group-item ">ROA(B) before interest and depreciation after tax: Return On Total Assets(B)</li>
+                    <li class="list-group-item ">EPS (Earning Per Share): It is a financial ratio that measures the profitability of a company on a per-share basis.</li>
+                    <li class="list-group-item">Per Share Net profit before tax : It refers to a financial measure that indicates the amount of net profit earned by a company on a per-share basis before accounting for taxes</li>
+                    <li class="list-group-item ">Debt ratio : It is a measure that indicates the proportion of a company's total debt in relation to its total assets.</li>
+                    <li class="list-group-item ">Net worth/Assets : It refers to the total value of a company's assets minus its liabilities.</li>
+                    <li class="list-group-item"> Net profit before tax/Paid-in capital : It is a financial ratio that measures the profitability of a company relative to its paid-in capital.</li>
+                    <li class="list-group-item ">Retained Earnings to Total Assets : It is a financial ratio that assesses the proportion of a company's total assets that is funded by its retained earnings.</li>
+                    <li class="list-group-item ">Net Income to Total Assets : It is a financial ratio that measures the profitability of a company relative to its total assets.</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>

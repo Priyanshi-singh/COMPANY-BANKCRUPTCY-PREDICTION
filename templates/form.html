@@ -20,6 +20,7 @@
     .login-box {
       position:absolute;
       margin-top: 25%;
+      margin-bottom: 25%;
       top:40%;
       left: 50%;
       width: 1000px;
@@ -187,6 +188,15 @@
       font-size: small;
       font-family:sans-serif;
     }
+
+    button{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 20px;
+    }
+    
   </style>
 {% endblock %}
 
@@ -252,13 +262,15 @@
           </div>
         </div>
       </div>
-      <a href="/predict">
+      <a href="">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Upload
-      </a>
+        <button type="submit" >
+          Upload
+        </button>
+    </a>
   </form>
 </div>
 {% endblock %}

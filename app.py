@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, flash, url_for
 from flask   import Flask, render_template, request, redirect, flash
 import pandas as pd 
@@ -25,12 +24,19 @@ def form():
             Net_Income = request.form.get('Net Income')
             sample = pd.DataFrame([[ROAC,ROAA,ROAB,EPS,Share_net_profit,
                                    Debt_ratio,Net_asset,net_profit_bt,
-                                   Retained_Earnings,Net_Income]],columns = select_col)
+                                   Retained_Earnings,Net_Income]],columns = select_col())
             print(sample)
-            result = result(sample)
+            result = (sample)
             return redirect(url_for('predict',result = result))
         return render_template('form.html')
 
+def result(sample_data):
+     result = return_model.score(sample_data)
+     return result
+
+@app.route('/predict')
+def predict():
+    return render_template('predict.html', result = result)
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -39,13 +45,8 @@ def about():
 def eda():
     return render_template('eda.html')
 
-def result(sample_data):
-     result = return_model.score(sample_data)
-     return result
 
-@app.route('/predict')
-def predict():
-    return render_template('predict.html',result = result)
+    
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
