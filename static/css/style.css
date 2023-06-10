@@ -8,18 +8,7 @@
 body{
     color: #ededed;
 }
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
+
 .logo{
     font-size: 30px;
     color:#eaeef1;
@@ -63,6 +52,7 @@ body{
 .home-content p{
     margin: 20px 0 40px;
     font-size: 16px;
+    text-shadow: #eaeef1;
 }
 .home-content .btn-box{
     display: flex;
@@ -77,8 +67,8 @@ body{
     align-content: center;
     width: 150px;
     height: 100%;
-    background: #00abf0;
-    border:2px solid #00abf0;
+    background: #f0f5f1;
+    border:2px solid #f8fbfc;
     border-radius: 8px;
     font-size: 19px;
     color: #081b29;
@@ -88,9 +78,12 @@ body{
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    padding:8px;
 }
 .btn-box a:hover{
-    color: #00abf0;
+    background: #030d11;
+    color:white;
+
 }
 .btn-box a:nth-child(2){
     background: transparent;
@@ -99,7 +92,7 @@ body{
     color: #081b29;
 }
 .btn-box a:nth-child(2)::before{
-    background: #00abf0;
+    background: #313233;
 }
 .btn-box a::before{
     content: '';
@@ -115,44 +108,7 @@ body{
 .btn-box a:hover::before{
     width: 100%;
 }
-.home-sci{
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-}
-.home-sci a{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #00abf0;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
+
 .home-content a:hover{
     color: #00abf0;
-}
-.home-sci a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-.home-sci a:hover::before{
-    width: 100%;
 }

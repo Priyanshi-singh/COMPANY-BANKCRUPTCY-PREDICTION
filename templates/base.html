@@ -19,13 +19,35 @@
   
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="logo">Bankruptcy Prediction</a>
-    <nav class="navbar">
-      <a href="/" class="active">Home</a>
-      <a href="/about">About</a>
-      <a href="/eda">eda</a>
+  <header>
+    <nav class="navbar navbar-expand-sm " style="background:transparent;">
+        <div class="container">
+        <a class="navbar-brand" href="#">Bankcruptcy Prediction</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto  mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/" >Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/form">Fill form </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/eda">EDA</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
     </nav>
+    
   </header>
 {% block content %}{% endblock %}
 {% block js %}{% endblock %}

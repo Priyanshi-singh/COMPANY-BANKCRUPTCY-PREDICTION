@@ -7,8 +7,12 @@ from load_data import return_model
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route('/', methods=['GET','POST'])
+
+@app.route('/form', methods=['GET','POST'])
 def form():
         if request.method == "POST":
             print('data')

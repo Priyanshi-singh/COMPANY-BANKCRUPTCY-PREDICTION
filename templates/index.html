@@ -3,11 +3,25 @@
 {% block css %}
 <style>
   body{
-      color: #ededed;
-        background-image: url('/static/images/home2.jpg');
+        
+        background-image: linear-gradient(rgba(36, 39, 36, 0.137),rgba(43, 37, 41, 0.288),rgba(92, 95, 92, 0.274)),url('/static/images/home2.jpg');
         background-repeat:no-repeat;
         background-position: center;
         background-size: cover;
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #fff;
 }
 </style>
 
@@ -16,19 +30,11 @@
 {% block content %}
 <section class="home">
   <div class="home-content">
-    <h1>Mohd Hasan. and Abdur Rahman</h1>
-    <h3>BANKRUPTCY PREDICTION</h3>
+    <h1>BANKRUPTCY PREDICTION</h1>
     <p>Bankruptcy prediction is the process of using financial and other relevant information to assess the likelihood of a company or individual becoming insolvent or unable to meet their financial obligations. It is a critical aspect of risk management for investors, creditors, and financial institutions</p>
     <div class="btn-box">
-      <a href="#">chat </a>
-      <a href="#">Lets Talk</a>
+      <a href="/form">Get Started</a>
     </div>
-  </div>
-  <div class="home-sci">
-    <a href="#"><i class='bx bxl-facebook'></i></a>
-    <a href="#"><i class='bx bxl-twitter'></i></a>
-    <a href="#"><i class='bx bxl-linkedin'></i></a>
-   <a href="#"><i class='bx bxl-instagram'></i></a>
   </div>
 </section>
 {% endblock %}
